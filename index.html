@@ -1,134 +1,208 @@
-<h1>Hello there!</h1>
+```html
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Diseño & Experiencias</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hola.</title>
 
-    <style>
-        *{
-            margin:0;
-            padding:0;
-            box-sizing:border-box;
-        }
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
 
-        body{
-            font-family: "Helvetica Neue", Arial, sans-serif;
-            background:#fafafa;
-            color:#111;
-            line-height:1.6;
-        }
+<style>
 
-        .container{
-            max-width:1100px;
-            margin:0 auto;
-            padding:60px 8%;
-        }
+:root{
+    --bg:#f7f5f2;
+    --text:#1b1b1b;
+    --accent1:#ff7eb3;
+    --accent2:#7afcff;
+    --accent3:#ffd166;
+}
 
-        .hero{
-            min-height:100vh;
-            display:flex;
-            flex-direction:column;
-            justify-content:center;
-        }
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
-        .hero h1{
-            font-size:clamp(3rem, 8vw, 7rem);
-            font-weight:300;
-            line-height:1;
-            margin-bottom:30px;
-        }
+body{
+    font-family:'Inter',sans-serif;
+    background:var(--bg);
+    color:var(--text);
+    overflow-x:hidden;
+}
 
-        .hero p{
-            max-width:600px;
-            font-size:1.2rem;
-            color:#555;
-        }
+body::before{
+    content:"";
+    position:fixed;
+    width:600px;
+    height:600px;
+    background:radial-gradient(circle,var(--accent1),transparent 70%);
+    top:-250px;
+    right:-200px;
+    opacity:.25;
+    z-index:-1;
+}
 
-        section{
-            padding:120px 0;
-            border-top:1px solid #eaeaea;
-        }
+body::after{
+    content:"";
+    position:fixed;
+    width:700px;
+    height:700px;
+    background:radial-gradient(circle,var(--accent2),transparent 70%);
+    bottom:-300px;
+    left:-250px;
+    opacity:.2;
+    z-index:-1;
+}
 
-        h2{
-            font-size:2rem;
-            font-weight:400;
-            margin-bottom:25px;
-        }
+.hero{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:4rem;
+}
 
-        .text{
-            max-width:650px;
-            color:#555;
-            font-size:1.1rem;
-        }
+.content{
+    max-width:850px;
+}
 
-        .highlight{
-            font-size:2.5rem;
-            font-weight:300;
-            line-height:1.3;
-            max-width:800px;
-        }
+.tag{
+    display:inline-block;
+    margin-bottom:2rem;
+    padding:.5rem 1rem;
+    border-radius:999px;
+    background:rgba(255,255,255,.7);
+    backdrop-filter:blur(10px);
+    font-size:.85rem;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+}
 
-        footer{
-            padding:80px 0;
-            text-align:center;
-            color:#888;
-            font-size:0.9rem;
-        }
-    </style>
+h1{
+    font-size:clamp(4rem,12vw,9rem);
+    font-weight:700;
+    line-height:.9;
+    margin-bottom:2rem;
+
+    background:linear-gradient(
+        120deg,
+        #111,
+        #555,
+        #ff7eb3,
+        #7afcff
+    );
+
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+.description{
+    font-size:1.35rem;
+    line-height:1.8;
+    color:#444;
+    max-width:700px;
+}
+
+.divider{
+    width:80px;
+    height:4px;
+    margin:3rem 0;
+    border-radius:50px;
+    background:linear-gradient(
+        90deg,
+        var(--accent1),
+        var(--accent3),
+        var(--accent2)
+    );
+}
+
+.quote{
+    margin-top:3rem;
+    font-size:1.1rem;
+    color:#666;
+    display:flex;
+    flex-direction:column;
+    gap:.8rem;
+}
+
+.scroll{
+    position:absolute;
+    bottom:40px;
+    left:50%;
+    transform:translateX(-50%);
+    color:#777;
+    font-size:.9rem;
+    letter-spacing:.1em;
+    text-transform:uppercase;
+}
+
+@media(max-width:768px){
+
+    .hero{
+        padding:2rem;
+    }
+
+    .description{
+        font-size:1.1rem;
+    }
+
+}
+
+</style>
 </head>
 <body>
 
-    <div class="container">
+<section class="hero">
 
-        <section class="hero">
-            <h1>
-                Diseño que<br>
-                se siente.
-            </h1>
+    <div class="content">
 
-            <p>
-                Creamos experiencias digitales donde la simplicidad,
-                la funcionalidad y la estética trabajan juntas para
-                comunicar con claridad.
-            </p>
-        </section>
+        <div class="tag">
+            Diario personal
+        </div>
 
-        <section>
-            <h2>Experiencia</h2>
+        <h1>Hola.</h1>
 
-            <p class="text">
-                Cada proyecto nace de la observación y la búsqueda de
-                soluciones intuitivas. Diseñamos interfaces que permiten
-                explorar, descubrir y conectar de forma natural.
-            </p>
-        </section>
+        <p class="description">
+            Este es un espacio personal.
+        </p>
 
-        <section>
-            <p class="highlight">
-                Menos elementos.
-                Más intención.
-                Más significado.
-            </p>
-        </section>
+        <div class="divider"></div>
 
-        <section>
-            <h2>Proceso</h2>
+        <p class="description">
+            Un lugar donde guardo experiencias,
+            ideas, fotografías, recuerdos y pequeños
+            momentos que merecen permanecer un poco más.
+        </p>
 
-            <p class="text">
-                Escuchar, investigar y crear. Un enfoque centrado en las
-                personas, donde cada detalle contribuye a una experiencia
-                visual coherente y memorable.
-            </p>
-        </section>
+        <div class="quote">
+            <span>No pretende enseñar nada.</span>
+            <span>No pretende convencer a nadie.</span>
+            <span>Simplemente documenta el camino.</span>
+        </div>
 
-        <footer>
-            © 2026 · Diseño & Experiencias
-        </footer>
+        <div class="divider"></div>
+
+        <p class="description">
+            A veces serán viajes.
+            A veces serán proyectos.
+            A veces solo pensamientos escritos en el momento adecuado.
+            <br><br>
+            Bienvenido.
+        </p>
 
     </div>
 
+</section>
+
+<div class="scroll">
+    ↓ explorar
+</div>
+
 </body>
 </html>
+```
+
 
