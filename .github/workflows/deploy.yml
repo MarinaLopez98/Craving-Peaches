@@ -14,10 +14,14 @@ jobs:
       id-token: write
     steps:
       - uses: actions/checkout@v4
+      - name: Copy site files to public folder
+        run: |
+          mkdir public
+          cp index.html momentos.html ideas.html atardeceres.html styles.css .nojekyll public/
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v1
         with:
-          path: .
+          path: public
 
   deploy:
     needs: build
