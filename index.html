@@ -113,12 +113,13 @@ h1{
 
 .gallery{
     display:grid;
-    grid-template-columns:repeat(3, minmax(0,1fr));
+    grid-template-columns:repeat(4, minmax(0,1fr));
     gap:1.5rem;
     margin-top:2.5rem;
 }
 
 .card{
+    grid-column:span 2;
     background:var(--cream);
     border:1px solid rgba(255,255,255,.85);
     border-radius:24px;
