@@ -1,4 +1,4 @@
-﻿name: Deploy GitHub Pages
+name: Deploy GitHub Pages
 
 on:
   push:
@@ -12,22 +12,19 @@ jobs:
       contents: read
       pages: write
       id-token: write
+
     steps:
       - uses: actions/checkout@v4
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          persist-credentials: true
-          fetch-depth: 0
+
       - name: Copy site files to public folder
         run: |
           rm -rf public
           mkdir -p public/images
           cp index.html arte.html desahogo.html libros.html styles.css .nojekyll public/
           cp images/*.svg public/images/ 2>/dev/null || true
-          echo "=== public contents ==="
-          find public -maxdepth 2 -type f | sort
+
       - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v1
+        uses: actions/upload-pages-artifact@v3
         with:
           path: public
 
@@ -37,5 +34,6 @@ jobs:
     permissions:
       pages: write
       id-token: write
+
     steps:
-      - uses: actions/deploy-pages@v1
+      - uses: actions/deploy-pages@v4
