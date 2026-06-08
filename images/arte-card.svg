@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="560" viewBox="0 0 800 560" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="50%" r="35%">
+      <stop offset="0%" stop-color="#a8f0ff" stop-opacity="0.95"/>
+      <stop offset="40%" stop-color="#6cc9ff" stop-opacity="0.75"/>
+      <stop offset="100%" stop-color="#19214a" stop-opacity="0.0"/>
+    </radialGradient>
+    <linearGradient id="stroke" x1="0%" x2="100%" y1="0%" y2="100%">
+      <stop offset="0%" stop-color="#f4f8ff" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#7dc8ff" stop-opacity="0.15"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="560" rx="38" ry="38" fill="#0a1434"/>
+  <circle cx="440" cy="280" r="120" fill="url(#glow)" />
+  <circle cx="440" cy="280" r="68" fill="#0f4f86" opacity="0.95" />
+  <circle cx="440" cy="280" r="32" fill="#c7f7ff" opacity="0.95" />
+  <path d="M120 380 C220 120 580 120 680 380" fill="none" stroke="url(#stroke)" stroke-width="4" opacity="0.7" />
+  <path d="M160 260 C320 60 520 100 640 270" fill="none" stroke="#d4e8ff" stroke-width="2" opacity="0.55" />
+  <path d="M220 470 C300 350 500 350 580 470" fill="none" stroke="#bedcff" stroke-width="2" opacity="0.35" />
+  <g opacity="0.9">
+    <circle cx="240" cy="130" r="6" fill="#f5fbff" />
+    <circle cx="620" cy="110" r="4" fill="#d8f2ff" />
+    <circle cx="720" cy="210" r="3" fill="#c1e5ff" />
+    <circle cx="130" cy="240" r="5" fill="#c8efff" />
+    <circle cx="530" cy="430" r="4" fill="#e3f7ff" />
+  </g>
+  <path d="M420 360 Q440 410 500 400" fill="none" stroke="#eef7ff" stroke-width="3" opacity="0.65" />
+  <path d="M378 310 C390 290 410 290 420 310" fill="none" stroke="#d4f1ff" stroke-width="4" opacity="0.55" />
+  <path d="M400 220 C390 180 450 180 440 220" fill="none" stroke="#d4f1ff" stroke-width="3" opacity="0.45" />
+  <circle cx="196" cy="268" r="2" fill="#e7f7ff" />
+  <circle cx="206" cy="292" r="2" fill="#e7f7ff" />
+  <circle cx="512" cy="160" r="2" fill="#e7f7ff" />
+</svg>

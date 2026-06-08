@@ -1,4 +1,4 @@
-:root{
+﻿:root{
     --bg:#fdf4ee;
     --text:#4a3a33;
     --peach:#f8dacf;
@@ -245,44 +245,26 @@ body.simple-page a.back-link:hover{
     text-decoration:underline;
 }
 
-body.page-momentos{
+body.page-arte{
     background:#fbf1ea;
 }
 
-body.page-ideas{
+body.page-desahogo{
     background:#f8eff5;
 }
 
-body.page-atardeceres{
+body.page-libros{
     background:#f6f0e8;
 }
 
-body.page-momentos .container{
+body.page-arte .container{
     background:#fff7f0;
 }
 
-body.page-ideas .container{
+body.page-desahogo .container{
     background:#fff6fb;
 }
 
-body.page-atardeceres .container{
+body.page-libros .container{
     background:#fff9f3;
-}
-
-@media(max-width:1024px){
-    .gallery{
-        grid-template-columns:repeat(2, minmax(0,1fr));
-    }
-}
-
-@media(max-width:720px){
-    .hero{
-        padding:2rem;
-    }
-    .gallery{
-        grid-template-columns:1fr;
-    }
-    .card img{
-        height:200px;
-    }
 }
